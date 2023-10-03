@@ -1,29 +1,66 @@
-# 0x00-shell_basics
+# Shell Basics
 
-Scripts and projects related to basic shell commands and navigation.
+This repository contains a series of shell scripts for the ALX System Engineering & DevOps program. Each script serves a specific purpose and is described below:
 
 ## Scripts
 
-Here are some of the scripts included in this project folder:
+### 0-current_working_directory.sh
 
-- `0-current_working_directory.sh`: Prints the absolute path of the current working directory.
+This script prints the absolute path name of the current working directory.
 
-- `1-listit.sh`: Displays the contents of the current directory.
+### 1-listit.sh
 
-- `2-bring_me_home.sh`: Changes the working directory to the user's home directory.
+Displays the contents list of the current directory.
 
-- `3-listfiles.sh`: Displays the contents of the current directory in a long format.
+### 2-bring_me_home.sh
 
-- `4-listmorefiles.sh`: Displays hidden files in the current directory in a long format.
+Changes the working directory to the user's home directory.
 
-- `5-listfilesdigitonly.sh`: Displays directory contents with numeric user and group IDs.
+### 3-listfiles.sh
 
-- ...
+Displays the current directory contents in a long format.
 
-## Usage
+### 4-listmorefiles.sh
 
-To use any of the scripts in this project folder, run the script using `./script_name.sh` from within this directory. For example, to run the script that prints the current working directory, use:
+Displays the current directory contents, including hidden files, in a long format.
 
-```bash
-./0-current_working_directory.sh
+### 5-listfilesdigitonly.sh
+
+Displays the current directory contents in a long format with user and group IDs displayed numerically, including hidden files.
+
+### 6-firstdirectory.sh
+
+Creates a directory named my_first_directory in the /tmp/ directory.
+
+### 7-movethatfile.sh
+
+Moves the file betty from /tmp/ to /tmp/my_first_directory.
+
+### 8-firstdelete.sh
+
+Deletes the file betty located in /tmp/my_first_directory.
+
+### 9-firstdirdeletion.sh
+
+Deletes the directory my_first_directory in the /tmp directory.
+
+### 10-back.sh
+
+Changes the working directory to the previous one.
+
+### 11-lists.sh
+
+Lists all files (including hidden ones) in the current directory, the parent of the working directory, and the /boot directory in long format.
+
+### 12-file_type.sh
+
+Prints the type of the file named iamafile (will be in the /tmp directory when executed).
+
+### 13-symbolic_link.sh
+
+Creates a symbolic link to /bin/ls, named __ls__, in the current working directory.
+
+### 14-copy_html.sh
+
+Copies all HTML files from the current working directory to the parent of the working directory, but only copies files that did not exist in the parent directory or are newer versions.
 
