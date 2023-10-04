@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent:staff _hello
+if [ -e "_hello" ] then chown vincent:staff _hello fi
