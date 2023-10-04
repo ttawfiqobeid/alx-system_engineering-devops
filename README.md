@@ -46,4 +46,7 @@ To use any of the scripts in this repository, navigate to the relevant subdirect
 
 ```bash
 ./0x00-shell_basics/0-current_working_directory.sh
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f70dda33735c47caa5c5ba9b58fb06082ba48d4
