@@ -1,0 +1,2 @@
+#!/bin/bash
+find /var/log -type f -name "*.log" -exec gzip {} 2>/dev/null

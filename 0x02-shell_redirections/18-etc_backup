@@ -1,0 +1,2 @@
+#!/bin/bash
+tar -czvf /var/backups/etc.tar.gz /etc
