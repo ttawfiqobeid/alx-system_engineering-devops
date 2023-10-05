@@ -1,2 +1,2 @@
 #!/bin/bash
-mv [A-Z]* /tmp/u/
+for i in *[A-Z]* do mv "$i" /tmp/u done
