@@ -1,2 +1,2 @@
 #!/bin/bash
-mv /var/tmp/* /tmp/
+sort | uniq -u

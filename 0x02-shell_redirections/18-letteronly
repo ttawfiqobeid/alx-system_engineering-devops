@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -czvf /var/backups/etc.tar.gz /etc
+grep -i "^[a-z]" /etc/ssh/sshd_config

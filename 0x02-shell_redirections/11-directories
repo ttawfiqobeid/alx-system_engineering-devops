@@ -1,2 +1,2 @@
 #!/bin/bash
-cp /tmp/* /var/tmp
+find . -type d -not -name '.' | wc -l

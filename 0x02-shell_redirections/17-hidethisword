@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -czvf /var/backups/var.tar.gz /var
+grep -i -v "bin" /etc/passwd

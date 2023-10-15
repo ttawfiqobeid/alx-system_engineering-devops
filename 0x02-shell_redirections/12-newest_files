@@ -1,2 +1,2 @@
 #!/bin/bash
-mv /tmp/* /var/tmp
+ls -t1 | head -n 10

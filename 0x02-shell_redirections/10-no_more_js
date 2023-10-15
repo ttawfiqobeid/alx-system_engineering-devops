@@ -1,2 +1,2 @@
 #!/bin/bash
-d=$(find . -type d | wc -l) f=$(find . -type f | wc -l) echo "Directories: $d" echo "Files: $f"
+find . -type f -name "*.js" -delete

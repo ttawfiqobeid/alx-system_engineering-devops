@@ -1,2 +1,2 @@
 #!/bin/bash
-du -h /var/log
+cut -d ':' -f 1,6 /etc/passwd | sort

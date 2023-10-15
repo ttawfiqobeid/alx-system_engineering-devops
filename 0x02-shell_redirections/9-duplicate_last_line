@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -1 | grep "^\."
+tail -n 1 iacta >> iacta

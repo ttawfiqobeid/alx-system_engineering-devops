@@ -1,2 +1,2 @@
 #!/bin/bash
-tar -czvf /var/backups/home.tar.gz /home
+grep -i "root" -A 3 /etc/passwd

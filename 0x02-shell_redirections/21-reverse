@@ -1,2 +1,2 @@
 #!/bin/bash
-find /var/log -type f -name "*.log.gz" -exec gunzip {} 2>/dev/null
+rev
