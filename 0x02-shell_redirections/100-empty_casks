@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -empty -print0 | xargs -0 -n1 echo
+find . -empty -printf "%f\n"
