@@ -1,29 +1,43 @@
 #!/usr/bin/env bash
-# Configure Nginx so that its HTTP response contains
-# a custom header
-#
+# Configure HAProxy as a load balancer
+
+# Ensure script is run with root privileges
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 
+   exit 1
+fi
+
+# HAProxy configuration
+web_01_ip="100.25.192.113"
+web_02_ip="100.24.235.44"
 balancer="\
 frontend haproxy_balancer
     bind *:80
     mode http
     default_backend webservers
-    
+
 backend webservers
     balance roundrobin
-    server 26071-web-01 44.210.150.159:80 check
-    server 26071-web-02 35.173.47.15:80 check
+    server web-01 $web_01_ip:80 check
+    server web-02 $web_02_ip:80 check
 "
+
 # Update packages
 apt-get -y update
 apt-get -y upgrade
 
-# Add HAProxy PPA
+# Add HAProxy PPA and install HAProxy
 apt-get -y install software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.5
 apt-get -y update
-
-# Install HAProxy
 apt-get -y install haproxy
+
+# Backup original HAProxy configuration file
 cp -a /etc/haproxy/haproxy.cfg{,.orig}
+
+# Append HAProxy configuration
 echo "$balancer" >> /etc/haproxy/haproxy.cfg
-service haproxy restart
+
+# Restart HAProxy
+systemctl restart haproxy
+
